@@ -10,6 +10,7 @@ import tyut.selab.bookservice.domain.BorrowBook;
 */
 public interface BorrowBookMapper {
 
+    
 }
 
 
