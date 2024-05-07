@@ -8,10 +8,8 @@ import java.util.Date;
  * @TableName book_borrow
  */
 public class BorrowBook implements Serializable {
-    /**
-     * 主键唯一标识
-     */
-    private Long borrowId;
+
+
 
     /**
      * book_id
@@ -19,24 +17,10 @@ public class BorrowBook implements Serializable {
     private Long bookId;
 
     /**
-     * 借阅用户id
-     */
-    private Long borrowUser;
-
-    /**
      * 借阅时长(已天为单位)
      */
     private Integer borrowDuration;
 
-    /**
-     * 状态(0为未归还 1为已归还)
-     */
-    private Integer status;
-
-    /**
-     * 借阅时间
-     */
-    private Date borrowTime;
 
     /**
      * 归还时间
@@ -45,19 +29,7 @@ public class BorrowBook implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 主键唯一标识
-     */
-    public Long getBorrowId() {
-        return borrowId;
-    }
 
-    /**
-     * 主键唯一标识
-     */
-    public void setBorrowId(Long borrowId) {
-        this.borrowId = borrowId;
-    }
 
     /**
      * book_id
@@ -73,19 +45,7 @@ public class BorrowBook implements Serializable {
         this.bookId = bookId;
     }
 
-    /**
-     * 借阅用户id
-     */
-    public Long getBorrowUser() {
-        return borrowUser;
-    }
 
-    /**
-     * 借阅用户id
-     */
-    public void setBorrowUser(Long borrowUser) {
-        this.borrowUser = borrowUser;
-    }
 
     /**
      * 借阅时长(已天为单位)
@@ -101,33 +61,8 @@ public class BorrowBook implements Serializable {
         this.borrowDuration = borrowDuration;
     }
 
-    /**
-     * 状态(0为未归还 1为已归还)
-     */
-    public Integer getStatus() {
-        return status;
-    }
 
-    /**
-     * 状态(0为未归还 1为已归还)
-     */
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
 
-    /**
-     * 借阅时间
-     */
-    public Date getBorrowTime() {
-        return borrowTime;
-    }
-
-    /**
-     * 借阅时间
-     */
-    public void setBorrowTime(Date borrowTime) {
-        this.borrowTime = borrowTime;
-    }
 
     /**
      * 归还时间
@@ -155,12 +90,8 @@ public class BorrowBook implements Serializable {
             return false;
         }
         BorrowBook other = (BorrowBook) that;
-        return (this.getBorrowId() == null ? other.getBorrowId() == null : this.getBorrowId().equals(other.getBorrowId()))
-            && (this.getBookId() == null ? other.getBookId() == null : this.getBookId().equals(other.getBookId()))
-            && (this.getBorrowUser() == null ? other.getBorrowUser() == null : this.getBorrowUser().equals(other.getBorrowUser()))
+        return (this.getBookId() == null ? other.getBookId() == null : this.getBookId().equals(other.getBookId()))
             && (this.getBorrowDuration() == null ? other.getBorrowDuration() == null : this.getBorrowDuration().equals(other.getBorrowDuration()))
-            && (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()))
-            && (this.getBorrowTime() == null ? other.getBorrowTime() == null : this.getBorrowTime().equals(other.getBorrowTime()))
             && (this.getReturnTime() == null ? other.getReturnTime() == null : this.getReturnTime().equals(other.getReturnTime()));
     }
 
@@ -168,12 +99,8 @@ public class BorrowBook implements Serializable {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((getBorrowId() == null) ? 0 : getBorrowId().hashCode());
         result = prime * result + ((getBookId() == null) ? 0 : getBookId().hashCode());
-        result = prime * result + ((getBorrowUser() == null) ? 0 : getBorrowUser().hashCode());
         result = prime * result + ((getBorrowDuration() == null) ? 0 : getBorrowDuration().hashCode());
-        result = prime * result + ((getStatus() == null) ? 0 : getStatus().hashCode());
-        result = prime * result + ((getBorrowTime() == null) ? 0 : getBorrowTime().hashCode());
         result = prime * result + ((getReturnTime() == null) ? 0 : getReturnTime().hashCode());
         return result;
     }
@@ -184,12 +111,8 @@ public class BorrowBook implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", borrowId=").append(borrowId);
         sb.append(", bookId=").append(bookId);
-        sb.append(", borrowUser=").append(borrowUser);
         sb.append(", borrowDuration=").append(borrowDuration);
-        sb.append(", status=").append(status);
-        sb.append(", borrowTime=").append(borrowTime);
         sb.append(", returnTime=").append(returnTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

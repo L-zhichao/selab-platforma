@@ -5,6 +5,9 @@ import tyut.selab.bookservice.domain.BorrowBook;
 
 import java.util.List;
 
+/**
+ *  书籍借阅service接口
+ */
 public interface BorrowService {
 
     /**

@@ -1,17 +1,18 @@
-package tyut.selab.bookservice.vo;
+package tyut.selab.bookservice.dto;
 
 import tyut.selab.bookservice.domain.BookInfo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @className: BookVo
  * @author: lizhichao
- * @description: TODO
+ * @description: TODO 添加书籍dto类
  * @date: 2024/5/7 21:41
  * @version: 1.0
  */
-public class BookDto{
+public class BookDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

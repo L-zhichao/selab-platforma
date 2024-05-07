@@ -2,7 +2,6 @@ package tyut.selab.bookservice.dao;
 
 import tyut.selab.bookservice.domain.BookInfo;
 
-import java.awt.print.Book;
 import java.util.List;
 
 /**
@@ -11,7 +10,7 @@ import java.util.List;
 * @createDate 2024-05-04 17:11:15
 * @Entity tyut.selab.bookservice.domain.BookInfo
 */
-public interface BookInfoMapper {
+public interface BookInfoDao {
 
     /**
      *  增加书籍信息
